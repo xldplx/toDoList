@@ -7,6 +7,12 @@ function add() {
 }
 
 function remove() {
+    let itemsAmount = document.getElementById("items").childNodes;
     let items = document.getElementById("items").lastChild;
     document.getElementById("items").removeChild(items);
+
+    if (itemsAmount.length == 0) {
+        alert("No items to remove.");
+    }
+
 }
